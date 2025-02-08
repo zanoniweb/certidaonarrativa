@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Inscrição Municipal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Consulta de Inscrição Municipal</h1>
+    
+    <label for="fileInput">Carregar arquivos Excel (2020-2025):</label>
+    <input type="file" id="fileInput" multiple accept=".xlsx">
+    
+    <label for="search">Inscrição Municipal:</label>
+    <input type="text" id="search" placeholder="Digite a inscrição (ex: 01.083.120.0050.001)">
+    <button onclick="searchData()">Pesquisar</button>
+
+    <h2>Resultado da Pesquisa</h2>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Inscrição Municipal</th>
+                <th>Nº da Quadra</th>
+                <th>Nº do Lote</th>
+                <th>Ano</th>
+                <th>Metragem</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
